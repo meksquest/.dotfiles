@@ -7,3 +7,7 @@ Session.vim
 # my_file.txt ignores all files named this regardless of the path
 # start adding the path to get more specific
 __scratch__.ex
+
+**/.claude/settings.local.json
+
+.lexical
