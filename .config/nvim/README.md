@@ -18,7 +18,7 @@ This is my configuration for [Neovim](https://neovim.io/), the hyperextensible V
 
 ### Testing
 
-- [VimTest](https://github.com/vim-test/vim-test):  Run your tests at the speed of thought
+- [Neotest](https://github.com/nvim-neotest/neotest): Extensible framework for interacting with tests
 
 ### Tree-Sitter
 
