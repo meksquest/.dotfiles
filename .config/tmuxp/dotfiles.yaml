@@ -1,0 +1,7 @@
+session_name: dotfiles
+start_directory: ~/.dotfiles/.config/nvim/
+windows:
+  - window_name: neovim config
+    panes:
+      - shell_command:
+        - cmd: nvim .

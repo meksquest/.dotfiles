@@ -1,0 +1,14 @@
+session_name: meksquest
+start_directory: ~/Code/meks_dev
+windows:
+  - window_name: code
+    panes:
+      - shell_command:
+        - cmd: nvim .
+  - window_name: server
+    panes:
+      - shell_command:
+        - cmd: iex -S mix phx.server
+  - panes:
+    - shell_command:
+      - cmd: git status

@@ -1,0 +1,15 @@
+session_name: gip
+start_directory: ~/Code/phoenix
+windows:
+  - window_name: code
+    panes:
+      - shell_command:
+        - cmd: nvim .
+  - window_name: server
+    panes:
+      - shell_command:
+        - cmd: iex -S mix phx.server
+  - window_name: infra
+    panes:
+      - shell_command:
+        - cmd: make start-infra
