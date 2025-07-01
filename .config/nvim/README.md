@@ -8,6 +8,9 @@ This is my configuration for [Neovim](https://neovim.io/), the hyperextensible V
 
 - [Leap](https://github.com/ggandor/leap.nvim): Neovim's answer to the mouse 🦘
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip): Snippet Engine for Neovim written in Lua.
+- [mini.align](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-align.md): Align text interactively
+- [mini.pairs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md): Automatically inserts the other half of a character pair
+- [mini.surround](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md): Actions for operating on surrounding pairs
 
 ### Generative AI
 
@@ -33,7 +36,6 @@ This is my configuration for [Neovim](https://neovim.io/), the hyperextensible V
 ### Workflow
 
 - [LSP](https://github.com/neovim/nvim-lspconfig): Quickstart configs for Nvim LSP
-- [Mini](https://github.com/echasnovski/mini.nvim): Library of 40+ independent Lua modules improving overall Neovim (version 0.9 and higher) experience with minimal effort
 - [Oil](https://github.com/stevearc/oil.nvim): Neovim file explorer: edit your filesystem like a buffer
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.
 - [Tree](https://github.com/nvim-tree/nvim-tree.lua): A file explorer tree for neovim written in lua

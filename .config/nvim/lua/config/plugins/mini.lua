@@ -1,15 +1,47 @@
--- ===================================================================
---  Mini
--- -------------------------------------------------------------------
---  https://github.com/echasnovski/mini.nvim
---  Library of 40+ independent Lua modules improving overall Neovim (version 0.9 and higher) experience with minimal effort
---  workflow
--- -------------------------------------------------------------------
 return {
-  "echasnovski/mini.nvim",
-  config = function()
-    require("mini.align").setup()
-    require("mini.comment").setup({})
-    require("mini.pairs").setup({})
-  end
+  -- ==============================================================================
+  --  mini.align
+  -- ------------------------------------------------------------------------------
+  --  https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-align.md
+  --  Align text interactively
+  --  editing
+  -- ------------------------------------------------------------------------------
+  { "echasnovski/mini.align", version = "*", event = "VeryLazy", opts = {} },
+
+
+  -- ==============================================================================
+  --  mini.pairs
+  -- ------------------------------------------------------------------------------
+  --  https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
+  --  Automatically inserts the other half of a character pair
+  --  editing
+  -- ------------------------------------------------------------------------------
+  { "echasnovski/mini.pairs", version = "*", event = "VeryLazy", opts = {} },
+
+  -- ==============================================================================
+  --  mini.surround
+  -- ------------------------------------------------------------------------------
+  --  https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
+  --  Actions for operating on surrounding pairs
+  --  editing
+  -- ------------------------------------------------------------------------------
+  {
+    "echasnovski/mini.surround",
+    version = "*",
+    event = "VeryLazy",
+
+    opts = {
+      mappings = {
+        add = "gsa",
+        delete = "gsd",
+        find = "gsf",
+        find_left = "gsF",
+        highlight = "gsh",
+        replace = "gsr",
+        update_n_lines = "gsn",
+        suffix_last = "l",
+        suffix_next = "n",
+      },
+    },
+  },
 }
