@@ -7,6 +7,7 @@
 -- -------------------------------------------------------------------
 return {
   "ggandor/leap.nvim",
+  cond = false,
 
   dependencies = {
     { "ggandor/flit.nvim", config = true },
