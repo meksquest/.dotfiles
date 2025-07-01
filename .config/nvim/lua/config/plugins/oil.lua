@@ -1,3 +1,10 @@
+-- ===================================================================
+--  Oil
+-- -------------------------------------------------------------------
+--  https://github.com/stevearc/oil.nvim
+--  Neovim file explorer: edit your filesystem like a buffer
+--  workflow
+-- -------------------------------------------------------------------
 return {
   'stevearc/oil.nvim',
   -- Optional dependencies

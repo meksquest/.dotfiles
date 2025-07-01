@@ -1,3 +1,10 @@
+-- ===================================================================
+--  nvim-treesitter
+-- -------------------------------------------------------------------
+--  https://github.com/nvim-treesitter/nvim-treesitter
+--  Tree-sitter configurations and abstraction layer
+--  tree-sitter
+-- -------------------------------------------------------------------
 local M = { "nvim-treesitter/nvim-treesitter" }
 
 M.dependencies = {

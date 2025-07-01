@@ -1,3 +1,10 @@
+-- ===================================================================
+--  Telescope
+-- -------------------------------------------------------------------
+--  https://github.com/nvim-telescope/telescope.nvim
+--  Find, Filter, Preview, Pick. All lua, all the time.
+--  workflow
+-- -------------------------------------------------------------------
 local function builtin(source, opts)
   opts = opts or {}
   require("telescope.builtin")[source](opts)

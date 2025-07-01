@@ -1,3 +1,10 @@
+-- ===================================================================
+--  CodeCompanion
+-- -------------------------------------------------------------------
+--  https://github.com/olimorris/codecompanion.nvim
+--  ✨ AI-powered coding, seamlessly in Neovim
+--  generative-ai
+-- -------------------------------------------------------------------
 return {
   "olimorris/codecompanion.nvim",
   opts = {
