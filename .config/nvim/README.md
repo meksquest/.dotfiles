@@ -26,6 +26,7 @@ This is my configuration for [Neovim](https://neovim.io/), the hyperextensible V
 
 ### User Interface
 
+- [Aerial](https://github.com/stevearc/aerial.nvim): Code outline window
 - [Catppuccin](https://github.com/catppuccin/nvim):  🍨 Soothing pastel theme for (Neo)vim
 - [Kanagawa](https://github.com/ggandor/leap.nvim): NeoVim dark colorscheme inspired by the colors of the famous painting by Katsushika Hokusai.
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua.
