@@ -20,6 +20,11 @@ set -Ux ERL_AFLAGS "-kernel shell_history enabled"
 set -Ux EDITOR nvim
 # source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
+# export global ("environment") variables
+set -gx XDG_DATA_HOME $HOME/.local/share
+set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx XDG_CACHE_HOME $HOME/.cache
+
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
     set _asdf_shims "$HOME/.asdf/shims"
