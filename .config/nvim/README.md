@@ -1,4 +1,6 @@
-# Coming Soon
+# Neovim Configuration
+
+This is my configuration for [Neovim](https://neovim.io/), the hyperextensible Vim-based text editor.
 
 <!-- nvim-plugins:start -->
 
