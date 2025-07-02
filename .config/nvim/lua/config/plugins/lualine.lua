@@ -7,11 +7,23 @@
 -- -------------------------------------------------------------------
 return {
   "nvim-lualine/lualine.nvim",
-  config = true,
-  -- config = {
-  -- options = {
-  -- component_separators = "│",
-  -- section_separators = "",
-  -- },
-  -- },
+  opts = {
+    sections = {
+      lualine_c = { function()
+        local path = vim.fn.expand("%")
+
+        if #path > 50 then
+          path = vim.fn.pathshorten(path)
+        end
+
+        if vim.bo.modified then
+          vim.cmd("hi lualine_c_normal guifg=#bb5500")
+          return path .. " 🚧"
+        else
+          vim.cmd("hi lualine_c_normal guifg=#cccccc")
+          return path
+        end
+      end },
+    }
+  }
 }
