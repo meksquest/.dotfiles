@@ -1,10 +1,10 @@
-/fish/.config/fish/fish_variables
+/.config/fish/fish_variables
 
 # the first `/` means start it the root of the git directory
 # the last `/` means the thing we are ignoring is a folder
-/fish/.config/fish/functions/
-/fish/.config/fish/completions/
-/fish/.config/fish/conf.d/
+/.config/fish/functions/
+/.config/fish/completions/
+/.config/fish/conf.d/
 
 # this is how you would allow (ie not ignore) certain functions
 # useful if you write your own
