@@ -34,6 +34,7 @@ function M.config()
       "yaml",
       "heex",
       "typescript",
+      "gleam"
     },
     highlight = { enable = true },
     indent = { enable = true },

@@ -1,6 +1,7 @@
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/opt/libpq/bin
-fish_add_path ~/.local/share/meks_nvim/mason/bin/
+# HACK: this was part of the below hack
+#fish_add_path /opt/homebrew/bin
+#fish_add_path /opt/homebrew/opt/libpq/bin
+#fish_add_path ~/.local/share/meks_nvim/mason/bin/
 
 if status is-interactive
 # Commands to run in interactive sessions can go here
@@ -34,9 +35,11 @@ end
 
 # Do not use fish_add_path (added in Fish 3.2) because it
 # potentially changes the order of items in PATH
-if not contains $_asdf_shims $PATH
+# HACK:
+# we were running into problems with installing gleam, which brew installed erlang, which caused mason’s version of lexical to not attach. Please fix this ASAP!
+#if not contains $_asdf_shims $PATH
     set -gx --prepend PATH $_asdf_shims
-end
+#end
 set --erase _asdf_shims
 
 direnv hook fish | source
