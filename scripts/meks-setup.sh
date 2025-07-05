@@ -2,21 +2,49 @@
 
 echo "Starting system setup"
 
-# mac specific setup
-echo "Start: macos-defaults"
-"$HOME/.dotfiles/scripts/macos-defaults.sh"
+## mac specific setup
 
-## Brewfile
+log 🍏 "Start: macos-defaults"
+"$HOME/.dotfiles/scripts/macos-defaults.sh"
+log 🍏 "End: macos-defaults"
+
+## Brew
 
 # Install Homebrew
-echo "Intall Homebrew"
+log 🍺 "Start: install Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+log 🍺 "End: install Homebrew"
 
 # installs everything in $HOME/.dotfiles/.Brewfile
-echo "brew bundle install"
+log 🍻 "Start: brew bundle install"
 /opt/homebrew/bin/brew bundle install --file "$HOME/.dotfiles/.Brewfile"
+log 🍻 "End: brew bundle install"
 
-echo "Stow the .dotfiles"
+## Stow .dotfiles
+
+log  🎁 "Start: stow .dotfiles"
 /opt/homebrew/bin/stow --dir "$HOME/.dotfiles/" --target "$HOME" .
+log  🎁 "End: stow .dotfiles"
 
-echo "meks system setup complete"
+## Make fish default shell
+log 🐟 "Start: fish default shell"
+echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
+cat /etc/shells
+chsh -s /opt/homebrew/bin/fish
+log 🐟 "End: fish default shell"
+
+glow <<EOF
+
+## Next Steps
+
+1. \`<Cmd>n\` to open new shell, verify default is 🐟 \`fish\`
+2. Manually install wisprflow
+
+_Good luck, intrepid hero!_
+EOF
+
+## helpers
+
+log() {
+  echo -e "\e[35m\e[1m\e[100m  [MEKS]  $1  $2  "
+}
