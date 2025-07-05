@@ -14,7 +14,7 @@ echo "Intall Homebrew"
 
 # installs everything in $HOME/.dotfiles/.Brewfile
 echo "brew bundle install"
-/opt/homebrew/bin/brew bundle install --global --file "$HOME/.dotfiles/.Brewfile"
+/opt/homebrew/bin/brew bundle install --file "$HOME/.dotfiles/.Brewfile"
 
 echo "Stow the .dotfiles"
 /opt/homebrew/bin/stow --dir "$HOME/.dotfiles/" --target "$HOME" .
