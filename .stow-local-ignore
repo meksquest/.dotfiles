@@ -1,0 +1,8 @@
+\.lexical
+
+\.git
+\.gitignore
+\.gitmodules
+
+^/README.*
+^/LICENSE.*

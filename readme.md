@@ -172,3 +172,10 @@ configuration standards.
 
 *Happy configuring! 🚀*
 
+## Quickstart on a new machine
+
+Required to be able to use git commands. Takes ~10 minutes.
+
+```shell
+xcode-select --install
+```
