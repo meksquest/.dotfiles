@@ -179,3 +179,8 @@ Required to be able to use git commands. Takes ~10 minutes.
 ```shell
 xcode-select --install
 ```
+
+Do this. You got it.
+```shell
+/bin/sh -c "$(curl https://raw.githubusercontent.com/meksquest/.dotfiles/refs/heads/main/scripts/meks-setup.sh)"
+```

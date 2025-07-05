@@ -2,6 +2,11 @@
 
 echo "Starting system setup"
 
+## Prep system setup script
+log 🐙 "Start: clone meksquest/.dotfiles"
+git clone https://github.com/meksquest/.dotfiles.git "$HOME/.dotfiles/"
+log 🐙 "End: clone meksquest/.dotfiles"
+
 ## mac specific setup
 
 log 🍏 "Start: macos-defaults"
