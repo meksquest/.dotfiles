@@ -170,8 +170,6 @@ configuration standards.
 
 ---
 
-*Happy configuring! 🚀*
-
 ## Managing the`.Brewfile` with `glow` as an example
 
 ```shell
@@ -182,13 +180,18 @@ brew bundle install --global
 
 ## Quickstart on a new machine
 
-Required to be able to use git commands. Takes ~10 minutes.
+After initial user setup, open terminal. Run
 
 ```shell
 xcode-select --install
 ```
 
-Do this. You got it.
+which is required to be able to use git commands. Takes ~10 minutes.
+
+Open up Safari, navigate to `https://github.com/meksquest/.dotfiles`. Copy and paste the below command into the terminal. You got this.
+
 ```shell
 /bin/sh -c "$(curl https://raw.githubusercontent.com/meksquest/.dotfiles/refs/heads/main/scripts/meks-setup.sh)"
 ```
+
+*Happy configuring! 🚀*
