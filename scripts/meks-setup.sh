@@ -1,5 +1,11 @@
 #!/bin/sh
 
+## helpers
+
+_log() {
+  echo -e "\e[35m\e[1m\e[100m  [MEKS]  $1  $2  "
+}
+
 echo "Starting system setup"
 
 ## Prep system setup script
@@ -47,9 +53,3 @@ glow <<EOF
 
 _Good luck, intrepid hero!_
 EOF
-
-## helpers
-
-_log() {
-  echo -e "\e[35m\e[1m\e[100m  [MEKS]  $1  $2  "
-}
