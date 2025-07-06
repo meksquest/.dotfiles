@@ -9,3 +9,5 @@
 # this is how you would allow (ie not ignore) certain functions
 # useful if you write your own
 # !/fish/.config/fish/functions/my_special_function.fish
+
+Session.vim
