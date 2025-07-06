@@ -44,7 +44,7 @@ cat /etc/shells
 chsh -s /opt/homebrew/bin/fish
 _log 🐟 "End: fish default shell"
 
-glow <<EOF
+/opt/homebrew/bin/glow <<EOF
 
 ## Next Steps
 
