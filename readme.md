@@ -172,6 +172,14 @@ configuration standards.
 
 *Happy configuring! 🚀*
 
+## Managing the`.Brewfile` with `glow` as an example
+
+```shell
+brew bundle add --global glow
+cat ~/.Brewfile | rg glow
+brew bundle install --global
+```
+
 ## Quickstart on a new machine
 
 Required to be able to use git commands. Takes ~10 minutes.
