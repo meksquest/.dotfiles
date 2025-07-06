@@ -3,7 +3,7 @@
 ## helpers
 
 _log() {
-  echo -e "\e[35m\e[1m\e[100m  [MEKS]  $1  $2  "
+  printf "\e[35m\e[1m\e[100m  [MEKS]  $1  $2  \n"
 }
 
 echo "Starting system setup"
