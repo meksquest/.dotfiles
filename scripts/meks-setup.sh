@@ -34,6 +34,7 @@ _log 🍻 "End: brew bundle install"
 ## Stow .dotfiles
 
 _log  🎁 "Start: stow .dotfiles"
+mkdir -p "$HOME/.config/"
 /opt/homebrew/bin/stow --dir "$HOME/.dotfiles/" --target "$HOME" .
 _log  🎁 "End: stow .dotfiles"
 
