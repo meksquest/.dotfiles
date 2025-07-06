@@ -3,40 +3,40 @@
 echo "Starting system setup"
 
 ## Prep system setup script
-log 🐙 "Start: clone meksquest/.dotfiles"
+_log 🐙 "Start: clone meksquest/.dotfiles"
 git clone https://github.com/meksquest/.dotfiles.git "$HOME/.dotfiles/"
-log 🐙 "End: clone meksquest/.dotfiles"
+_log 🐙 "End: clone meksquest/.dotfiles"
 
 ## mac specific setup
 
-log 🍏 "Start: macos-defaults"
+_log 🍏 "Start: macos-defaults"
 "$HOME/.dotfiles/scripts/macos-defaults.sh"
-log 🍏 "End: macos-defaults"
+_log 🍏 "End: macos-defaults"
 
 ## Brew
 
 # Install Homebrew
-log 🍺 "Start: install Homebrew"
+_log 🍺 "Start: install Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-log 🍺 "End: install Homebrew"
+_log 🍺 "End: install Homebrew"
 
 # installs everything in $HOME/.dotfiles/.Brewfile
-log 🍻 "Start: brew bundle install"
+_log 🍻 "Start: brew bundle install"
 /opt/homebrew/bin/brew bundle install --file "$HOME/.dotfiles/.Brewfile"
-log 🍻 "End: brew bundle install"
+_log 🍻 "End: brew bundle install"
 
 ## Stow .dotfiles
 
-log  🎁 "Start: stow .dotfiles"
+_log  🎁 "Start: stow .dotfiles"
 /opt/homebrew/bin/stow --dir "$HOME/.dotfiles/" --target "$HOME" .
-log  🎁 "End: stow .dotfiles"
+_log  🎁 "End: stow .dotfiles"
 
 ## Make fish default shell
-log 🐟 "Start: fish default shell"
+_log 🐟 "Start: fish default shell"
 echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
 cat /etc/shells
 chsh -s /opt/homebrew/bin/fish
-log 🐟 "End: fish default shell"
+_log 🐟 "End: fish default shell"
 
 glow <<EOF
 
@@ -50,6 +50,6 @@ EOF
 
 ## helpers
 
-log() {
+_log() {
   echo -e "\e[35m\e[1m\e[100m  [MEKS]  $1  $2  "
 }
