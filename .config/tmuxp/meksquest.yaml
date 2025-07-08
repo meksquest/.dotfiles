@@ -12,3 +12,7 @@ windows:
   - panes:
     - shell_command:
       - cmd: git status
+  - window_name: lazygit
+    panes:
+      - shell_command:
+        - cmd: lazygit

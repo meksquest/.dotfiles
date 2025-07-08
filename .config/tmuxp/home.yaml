@@ -1,0 +1,4 @@
+session_name: home
+start_directory: ~/Code/
+windows:
+  - window_name: code

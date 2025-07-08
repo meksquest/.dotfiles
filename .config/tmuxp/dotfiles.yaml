@@ -5,3 +5,7 @@ windows:
     panes:
       - shell_command:
         - cmd: nvim .
+  - window_name: lazygit
+    panes:
+      - shell_command:
+        - cmd: lazygit
