@@ -7,38 +7,13 @@
 -- -------------------------------------------------------------------
 local M = { "neovim/nvim-lspconfig" }
 
-M.dependencies = {
-  "folke/neodev.nvim",
-  "williamboman/mason-lspconfig.nvim",
-  "williamboman/mason.nvim",
-}
-
 function M.config()
-  local servers = {
-    bashls = {},
-    lexical = {},
-    lua_ls = {
-      Lua = {
-        telemetry = { enable = false },
-        workspace = { checkThirdParty = false },
-      },
-    },
-    ts_ls = {},  -- TypeScript/JavaScript language server
-    eslint = {}, -- ESLint for linting
-  }
+  vim.lsp.config("lexical", {
+    -- HACK: Portability smell
+    cmd = { vim.env.HOME .. "/Code/lexical/_build/dev/package/lexical/bin/start_lexical.sh" }
 
-  require("neodev").setup({})
-  require("mason").setup()
-
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-
-  local mason_lspconfig = require("mason-lspconfig")
-
-  mason_lspconfig.setup({
-    ensure_installed = vim.tbl_keys(servers),
   })
-
+  vim.lsp.enable { "bashls", "gleam", "lexical", "lua_ls", "ts_ls" }
   vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
     callback = function(event)
@@ -66,9 +41,6 @@ function M.config()
           r = { telescope.lsp_references, "References" },
           s = { telescope.lsp_document_symbols, "Symbols" },
         },
-
-        ["[d"] = { vim.lsp.diagnostic.goto_prev, "Prev diagnostic" },
-        ["]d"] = { vim.lsp.diagnostic.goto_next, "Next diagnostic" },
       }
 
       require("which-key").register(mappings, { buffer = event.buffer })
