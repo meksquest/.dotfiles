@@ -1,0 +1,63 @@
+start-at-login = false
+#
+# accordian-padding = 30
+#
+# default-root-container-layout = 'tiles'
+
+[gaps]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.right = 8
+outer.bottom = 8
+outer.top = 8
+
+[mode.main.binding]
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
+
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+alt-shift-minus = 'resize smart -100'
+alt-shift-equal = 'resize smart +100'
+
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-b = 'workspace B' # Web browser
+alt-c = 'workspace C' # comms
+alt-m = 'workspace M' # Music
+# alt-n = 'workspace N' # Notes
+alt-t = 'workspace T' # Terminal
+
+# ------------------------------
+# App-specific settings
+# ------------------------------
+
+# Browser
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace B'
+
+# Comms
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace C'
+
+# Terminal
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace T'
+
+# Music
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace M'
