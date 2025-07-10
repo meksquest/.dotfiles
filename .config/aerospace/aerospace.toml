@@ -35,7 +35,7 @@ alt-3 = 'workspace 3'
 alt-b = 'workspace B' # Web browser
 alt-c = 'workspace C' # comms
 alt-m = 'workspace M' # Music
-# alt-n = 'workspace N' # Notes
+alt-n = 'workspace N' # Notes
 alt-t = 'workspace T' # Terminal
 
 # ------------------------------
@@ -56,6 +56,11 @@ run = 'move-node-to-workspace C'
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace T'
+
+# Notes
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace N'
 
 # Music
 [[on-window-detected]]
