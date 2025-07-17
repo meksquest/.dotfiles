@@ -1,0 +1,18 @@
+session_name: bookshelf-gleam
+start_directory: ~/Code/bookshelf-gleam/
+windows:
+  - window_name: server-code
+    panes:
+      - shell_command:
+        - cmd: nvim .
+  - window_name: server-server
+    panes:
+      - shell_command:
+        - cmd: iex -S mix phx.server
+  - panes:
+    - shell_command:
+      - cmd: git status
+  - window_name: lazygit
+    panes:
+      - shell_command:
+        - cmd: lazygit
