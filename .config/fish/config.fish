@@ -51,3 +51,6 @@ set -x PYO3_PYTHON python3
 
 # Created by `pipx` on 2025-06-18 21:42:58
 set PATH $PATH /Users/mmcclure/.local/bin
+
+# Gleam Exercism helper
+alias gleam-ex='~/.dotfiles/scripts/gleam-exercism.sh'
