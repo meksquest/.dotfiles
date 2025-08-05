@@ -1,4 +1,4 @@
-session_name: gip
+session_name: gpi
 start_directory: ~/Code/phoenix
 windows:
   - window_name: code
