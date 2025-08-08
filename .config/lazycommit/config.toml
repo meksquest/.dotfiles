@@ -1,0 +1,10 @@
+# LazyCommit Configuration
+
+# Maximum number of tokens in diff to send to LLM
+max_diff_tokens = 200000
+
+# Path to custom prompt template
+prompt_path = "/Users/mmcclure/.config/lazycommit/lazycommit_template.txt"
+
+# Specific model to use with the llm tool
+model_name = "o4-mini"
