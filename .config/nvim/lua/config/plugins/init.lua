@@ -45,7 +45,24 @@ return {
     "lewis6991/gitsigns.nvim",
     config = {
       current_line_blame = true,
-    }
+    },
+    init = function()
+      vim.keymap.set('n', "[h", function()
+        require("gitsigns").nav_hunk("prev")
+      end, { desc = "previous hunk" })
+      vim.keymap.set('n', "]h", function()
+        require("gitsigns").nav_hunk("next")
+      end, { desc = "next hunk" })
+      vim.keymap.set('n', "[H", function()
+        require("gitsigns").nav_hunk("first")
+      end, { desc = "first hunk" })
+      vim.keymap.set('n', "]H", function()
+        require("gitsigns").nav_hunk("last")
+      end, { desc = "last hunk" })
+      vim.keymap.set("n", "<leader>gp", require("gitsigns").preview_hunk, { desc = "preview hunk" })
+      vim.keymap.set("n", "<leader>gr", require("gitsigns").reset_hunk, { desc = "reset hunk" })
+      vim.keymap.set("n", "<leader>gP", require("gitsigns").preview_hunk_inline, { desc = "preview hunk inline" })
+    end
   },
   "tpope/vim-fugitive",
 
@@ -116,16 +133,6 @@ return {
         ignore_buftypes = {},
       },
     },
-  },
-  {
-    "echasnovski/mini.diff",
-    config = function()
-      local diff = require("mini.diff")
-      diff.setup({
-        -- Disabled by default
-        source = diff.gen_source.none(),
-      })
-    end,
   },
   -- meta plugin for moar plugins
   {
