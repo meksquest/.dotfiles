@@ -127,13 +127,6 @@ return {
       })
     end,
   },
-  {
-    "ravitemer/mcphub.nvim",
-    build = "npm install -g mcp-hub@latest",
-    config = function()
-      require("mcphub").setup()
-    end
-  },
   -- meta plugin for moar plugins
   {
     "folke/snacks.nvim",
