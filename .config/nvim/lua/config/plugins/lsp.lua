@@ -13,7 +13,8 @@ function M.config()
     cmd = { vim.env.HOME .. "/Code/lexical/_build/dev/package/lexical/bin/start_lexical.sh" }
 
   })
-  vim.lsp.enable { "bashls", "gleam", "lexical", "lua_ls", "ts_ls" }
+  -- vim.lsp.enable { "bashls", "gleam", "lexical", "lua_ls", "ts_ls" }
+  vim.lsp.enable { "bashls", "expert", "gleam", "lua_ls", "ts_ls" }
   vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
     callback = function(event)
