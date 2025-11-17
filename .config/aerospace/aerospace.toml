@@ -13,6 +13,7 @@ outer.bottom = 8
 outer.top = 8
 
 [mode.main.binding]
+# ? /
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
@@ -56,13 +57,43 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # ------------------------------
 
 # Browser
+## Safari
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace B'
+
+## Zen
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace B'
 
 # Comms
+# slack, discord, messaging, Nick uses alt-l to cycle through them stacked
+# (accordion layout)
+
+## Slack
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace C'
+
+## Discord
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'move-node-to-workspace C'
+
+## Messaging
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace C'
+
+## Teams
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = 'move-node-to-workspace C'
+
+## Outlook
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
 run = 'move-node-to-workspace C'
 
 # Terminal
