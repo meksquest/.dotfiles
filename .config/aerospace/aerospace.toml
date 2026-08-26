@@ -39,6 +39,7 @@ alt-c = 'workspace C' # Comms
 alt-m = 'workspace M' # Music
 alt-n = 'workspace N' # Notes
 alt-t = 'workspace T' # Terminal
+alt-f = 'workspace F' # Figma
 
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -62,10 +63,16 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace B'
 
-## Zen
+## Firefox
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
+if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace B'
+
+# Figma
+## Figma
+[[on-window-detected]]
+if.app-id = 'figmacom.figma.Desktop'
+run = 'move-node-to-workspace F'
 
 # Comms
 # slack, discord, messaging, Nick uses alt-l to cycle through them stacked
